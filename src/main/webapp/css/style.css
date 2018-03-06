@@ -1,0 +1,783 @@
+/* #searchDiv {
+	margin-top: 40px;
+	margin-left: 300px;
+}
+
+body {
+	background-color: black;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.smallFontStyle {
+	font-size: 16px;
+}
+
+#albumImg {
+	height: 300px;
+	margin-top: 25px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+ol {
+	color: white;
+	font-size: 20px;
+}
+
+.margin-top-20 {
+	margin-top: 20px;
+}
+
+.margin-left-20 {
+	margin-left: 20px;
+}
+
+#songList li {
+	padding-top: 25px;
+}
+
+.padding-left-10 {
+	padding-left: 10px;
+	color: #a9a9a9;
+}
+#trackList {
+	overflow-y: scroll;
+	height:100%;
+}
+.defaultCursor {
+	cursor:default;
+}
+
+.track-name, #playListName {
+	color: white !important;
+	font-size: 22px;
+}
+
+abbr {
+	color: #a9a9a9;
+	font-size: 22px;
+	padding: 0 1.5em;
+	white-space: nowrap;
+	width: 3%;
+}
+
+#songList {
+	margin-top: 67px;
+	width: 1500px;
+	height: 840px;
+	background-color: #171a1f;
+}
+
+#playlistBtn {
+	width: 130px;
+	height: 40px;
+	border-radius: 100px;
+	border: 100px;
+	border: 1px solid #151414;
+	font-size: 17px;
+	padding: .5em .9em;
+	background-color: #03e01e;
+	color: white;
+}
+
+#playBtn {
+	margin-left: 150px;
+	width: 100px;
+	height: 40px;
+	border-radius: 100px;
+	border: 100px;
+	border: 1px solid #151414;
+	font-size: 17px;
+	padding: .5em .9em;
+	background-color: #03e01e;
+	color: white;
+}
+
+#searchInput {
+	border: 1px solid #ccc;
+	border-radius: 100px;
+	box-shadow: inset 0 1px 1px 1px rgba(0, 0, 0, .07);
+	font-size: 14px;
+	padding: .5em .9em;
+	height: 40px;
+	width: 500px;
+}
+#menuDiv{
+    width: 220px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 100;
+    background-color: rgba(0,0,0,.5);
+    overflow: auto;
+    min-height: 0!important;
+    will-change: transform;
+} */
+ #trackList ul,#artistList ul{
+ 	list-style:none;
+    padding-left:0;
+ }
+ html {
+ height:100%;
+ }
+
+.infoFontStyle {
+	font-size:13px;
+}
+#searchDiv {
+	margin-top: 40px;
+	margin-left: 300px;
+}
+
+body {
+	display: flex;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#262928+0,181a1a+35,121313+65,080909+100 */
+background: #262928; /* Old browsers */
+background: -moz-linear-gradient(top, #262928 0%, #181a1a 35%, #121313 65%, #080909 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #262928 0%,#181a1a 35%,#121313 65%,#080909 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #262928 0%,#181a1a 35%,#121313 65%,#080909 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#262928', endColorstr='#080909',GradientType=0 ); /* IE6-9 */
+}
+.songName {
+	font-size: 1.8em;
+    color: #f4f4f4;
+} 
+/* #loader {
+	background: linear-gradient(to bottom, #3a4e55 0%,#27363b 33%,#161e21 63%,#000000 100%,#070a0b 100%);
+} */
+.songIcon {
+	width: 54px;
+	height: 54px;
+	display: block;
+	float: left;
+	margin: 0 10px; 
+	background-size: 50% 50%;
+}
+.songDuration {
+	float: right;
+    margin-right: 80px;
+}
+.noMargin {
+	margin:0px;
+}
+.noPadding {
+	padding:0px;
+}
+.smallFontStyle {
+	font-size: 16px;
+}
+
+#albumImg {
+	height: 300px;
+	margin-top: 25px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+ol {
+	color: #f1ecec;
+	font-size: 20px;
+}
+.listOfSongs {
+	border-bottom: 1px solid #4a4646;
+    
+    font-size: 16px;
+    height: 45px;
+    color:#f4f4f4;
+    padding-top: 11px;
+} 
+.margin-top-20 {
+	margin-top: 20px;
+}
+
+.margin-left-20 {
+	margin-left: 20px;
+}
+
+#songList li {
+	padding-top: 25px;
+}
+
+.padding-left-10 {
+	padding-left: 10px;
+	color: #a9a9a9;
+}
+/* #trackList {
+	overflow-y: scroll;
+	height:100%;
+} */
+
+
+.track-name, #playListName {
+	color: white !important;
+	font-size: 20px;
+	font-weight: normal;
+}
+
+abbr {
+	color: #a9a9a9;
+	font-size: 20px;
+	padding: 0 1.5em;
+	white-space: nowrap;
+	width: 3%;
+	font-weight: normal;
+	text-transform: capitalize;
+}
+
+#songList{
+	margin-top: 60px;
+	width: 1500px;
+	height: 840px;
+	background: #3a4e55;
+    background: -moz-linear-gradient(top, #3a4e55 0%, #27363b 33%, #161e21 63%, #000000 100%, #070a0b 100%);
+    background: -webkit-linear-gradient(top, #3a4e55 0%,#27363b 33%,#161e21 63%,#000000 100%,#070a0b 100%);
+    background: linear-gradient(to bottom, #3a4e55 0%,#27363b 33%,#161e21 63%,#000000 100%,#070a0b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a4e55', endColorstr='#070a0b',GradientType=0 );
+}
+
+#playlistBtn {
+	width: 130px;
+	height: 40px;
+	border-radius: 10px;
+	border: 100px;
+	border: 1px solid #151414;
+	font-size: 17px;
+	padding: .5em .9em;
+	background-color: #18BC9C;
+	color: white;
+}
+
+#playBtn {
+	margin-left: 150px;
+	width: 100px;
+	height: 40px;
+	border-radius: 10px;
+	border: 100px;
+	border: 1px solid #151414;
+	font-size: 17px;
+	padding: .5em .9em;
+	background-color: #18BC9C;
+	color: white;
+}
+
+#searchInput {
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	box-shadow: inset 0 1px 1px 1px rgba(0, 0, 0, .07);
+	font-size: 14px;
+	padding: .5em .9em;
+	height: 40px;
+	width: 500px;
+}
+/* #menuDiv{
+    width: 220px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 100;
+    background-color: rgba(0,0,0,.5);
+    overflow: auto;
+    min-height: 0!important;
+    will-change: transform;
+} */
+.albumName{
+	text-align: left;
+    font-size: 15px;
+    font-weight: normal;
+    color: #a9a9a9;
+    text-transform: capitalize;
+}
+
+.songDetails {
+	text-align: right;
+    font-size: 12px;
+    font-weight: normal;
+    color: #a9a9a9;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+}
+.noCount {
+	width: 20px;
+	float: left;
+	font-size: 1.1em;
+	color: #f4f4f4;
+	line-height: 40px;
+	text-align: right;
+} 
+header
+{
+	font-family: 'Lobster', cursive;
+	text-align: center;
+	font-size: 25px;	
+}
+
+#info
+{
+	font-size: 18px;
+	color: #555;
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+a{
+	color: #074E8C;
+}
+
+.scrollbar
+{
+	margin-left: 30px;
+	float: left;
+	height: 810px;
+	width: 100%;
+	/* background: #004C75; */
+	overflow-y: scroll;
+	margin-bottom: 25px;
+	overflow-x: hidden;
+}
+
+.force-overflow
+{
+	min-height: 450px;
+}
+
+#wrapper
+{
+	text-align: center;
+	width: 500px;
+	margin: auto;
+}
+
+/*
+ *  STYLE 1
+ */
+
+#style-1::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+#style-1::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+#style-1::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+
+/*
+ *  STYLE 2
+ */
+
+#style-2::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+#style-2::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+#style-2::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #D62929;
+}
+
+/*
+ *  STYLE 3
+ */
+
+#style-3::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+#style-3::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+#style-3::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+}
+
+/*
+ *  STYLE 4
+ */
+
+#style-4::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+#style-4::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+#style-4::-webkit-scrollbar-thumb
+{
+	background-color: #33454b;
+	border: 2px solid #ccc;
+}
+
+
+/*
+ *  STYLE 5
+ */
+
+#style-5::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+#style-5::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+#style-5::-webkit-scrollbar-thumb
+{
+	background-color: #0ae;
+	
+	background-image: -webkit-gradient(linear, 0 0, 0 100%,
+	                   color-stop(.5, rgba(255, 255, 255, .2)),
+					   color-stop(.5, transparent), to(transparent));
+}
+
+
+/*
+ *  STYLE 6
+ */
+
+#style-6::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+#style-6::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+#style-6::-webkit-scrollbar-thumb
+{
+	background-color: #F90;	
+	background-image: -webkit-linear-gradient(45deg,
+	                                          rgba(255, 255, 255, .2) 25%,
+											  transparent 25%,
+											  transparent 50%,
+											  rgba(255, 255, 255, .2) 50%,
+											  rgba(255, 255, 255, .2) 75%,
+											  transparent 75%,
+											  transparent)
+}
+
+
+/*
+ *  STYLE 7
+ */
+
+#style-7::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+
+#style-7::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+#style-7::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-image: -webkit-gradient(linear,
+									   left bottom,
+									   left top,
+									   color-stop(0.44, rgb(122,153,217)),
+									   color-stop(0.72, rgb(73,125,189)),
+									   color-stop(0.86, rgb(28,58,148)));
+}
+
+/*
+ *  STYLE 8
+ */
+
+#style-8::-webkit-scrollbar-track
+{
+	border: 1px solid black;
+	background-color: #F5F5F5;
+}
+
+#style-8::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+#style-8::-webkit-scrollbar-thumb
+{
+	background-color: #000000;	
+}
+
+
+/*
+ *  STYLE 9
+ */
+
+#style-9::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+#style-9::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+#style-9::-webkit-scrollbar-thumb
+{
+	background-color: #F90;	
+	background-image: -webkit-linear-gradient(90deg,
+	                                          rgba(255, 255, 255, .2) 25%,
+											  transparent 25%,
+											  transparent 50%,
+											  rgba(255, 255, 255, .2) 50%,
+											  rgba(255, 255, 255, .2) 75%,
+											  transparent 75%,
+											  transparent)
+}
+
+
+/*
+ *  STYLE 10
+ */
+
+#style-10::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+
+#style-10::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+#style-10::-webkit-scrollbar-thumb
+{
+	background-color: #AAA;
+	border-radius: 10px;
+	background-image: -webkit-linear-gradient(90deg,
+	                                          rgba(0, 0, 0, .2) 25%,
+											  transparent 25%,
+											  transparent 50%,
+											  rgba(0, 0, 0, .2) 50%,
+											  rgba(0, 0, 0, .2) 75%,
+											  transparent 75%,
+											  transparent)
+}
+
+
+/*
+ *  STYLE 11
+ */
+
+#style-11::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+
+#style-11::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+#style-11::-webkit-scrollbar-thumb
+{
+	background-color: #3366FF;
+	border-radius: 10px;
+	background-image: -webkit-linear-gradient(0deg,
+	                                          rgba(255, 255, 255, 0.5) 25%,
+											  transparent 25%,
+											  transparent 50%,
+											  rgba(255, 255, 255, 0.5) 50%,
+											  rgba(255, 255, 255, 0.5) 75%,
+											  transparent 75%,
+											  transparent)
+}
+
+/*
+ *  STYLE 12
+ */
+
+#style-12::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.9);
+	border-radius: 10px;
+	background-color: #444444;
+}
+
+#style-12::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+#style-12::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #D62929;
+	background-image: -webkit-linear-gradient(90deg,
+											  transparent,
+											  rgba(0, 0, 0, 0.4) 50%,
+											  transparent,
+											  transparent)
+}
+
+/*
+ *  STYLE 13
+ */
+
+#style-13::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.9);
+	border-radius: 10px;
+	background-color: #CCCCCC;
+}
+
+#style-13::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+#style-13::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #D62929;
+	background-image: -webkit-linear-gradient(90deg,
+											  transparent,
+											  rgba(0, 0, 0, 0.4) 50%,
+											  transparent,
+											  transparent)
+}
+
+/*
+ *  STYLE 14
+ */
+
+#style-14::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.6);
+	background-color: #CCCCCC;
+}
+
+#style-14::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+#style-14::-webkit-scrollbar-thumb
+{
+	background-color: #FFF;
+	background-image: -webkit-linear-gradient(90deg,
+	                                          rgba(0, 0, 0, 1) 0%,
+											  rgba(0, 0, 0, 1) 25%,
+											  transparent 100%,
+											  rgba(0, 0, 0, 1) 75%,
+											  transparent)
+}
+
+/*
+ *  STYLE 15
+ */
+
+#style-15::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+
+#style-15::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+#style-15::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #FFF;
+	background-image: -webkit-gradient(linear,
+									   40% 0%,
+									   75% 84%,
+									   from(#4D9C41),
+									   to(#19911D),
+									   color-stop(.6,#54DE5D))
+}
+
+/*
+ *  STYLE 16
+ */
+
+#style-16::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+
+#style-16::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+#style-16::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #FFF;
+	background-image: -webkit-linear-gradient(top,
+											  #e4f5fc 0%,
+											  #bfe8f9 50%,
+											  #9fd8ef 51%,
+											  #2ab0ed 100%);
+}
+
